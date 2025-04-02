@@ -1,6 +1,6 @@
-var __TEARDOWN_MESSAGE__: string;
 
 module.exports = async function () {
+  let __TEARDOWN_MESSAGE__: string;
   // Start services that that the app needs to run (e.g. database, docker-compose, etc.).
   console.log('\nSetting up...\n');
 
