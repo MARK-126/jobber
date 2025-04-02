@@ -1,11 +1,12 @@
 import nx from '@nx/eslint-plugin';
+import prettierConfig from "eslint-config-prettier";
 
 export default [
   ...nx.configs['flat/base'],
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
   {
-    ignores: ['**/dist'],
+    ignores: ['**/dist', '**/build', '**/node_modules'],
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
@@ -37,6 +38,8 @@ export default [
       '**/*.mjs',
     ],
     // Override or add rules here
+    
     rules: {},
   },
+  prettierConfig,
 ];
